@@ -1,6 +1,24 @@
 # Snake
 Snake is a video game genre where the player maneuvers a growing line that becomes a primary obstacle to itself.
 
+Features
+--------
+
+- Fun to play!
+- Simple Python code
+- Easy to install
+- Designed for education
+- Depends only on the Python Standard Library
+- Used in hundreds of hours of classroom instruction
+- Fully Documented
+- 100% Test Coverage
+- Developed on Python 3.10
+- Tested on CPython 3.6, 3.7, 3.8, 3.9, 3.10
+- Tested on Linux, Mac OS X, and Windows
+- Tested using GitHub Actions
+
+ 
+
 ## Follow on:
 <p align="left">
 <a href="https://github.com/mikiadarsh25"><img src="https://img.shields.io/badge/GitHub-Follow%20on%20GitHub-inactive.svg?logo=github"></a>
