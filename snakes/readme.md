@@ -32,6 +32,9 @@ Features
 <p align="left">
 <a href="https://instagram.com/adarsh_mickey"><img src="https://img.shields.io/badge/Instagram-Follow%20on%20Instagram-important.svg?logo=instagram"></a>
 </p>
+<p align="center">
+<a href="https://replit.com/@ADARSHPRAKASH2/Snake?v=1"><img src="https://img.shields.io/badge/Replit-Hosted%20on%20Replit-informational.svg?logo=replit"></a>
+</p>
 
 ### Credits:
 * [Adarsh Prakash](https://github.com/mikiadarsh25)
