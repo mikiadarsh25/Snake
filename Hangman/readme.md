@@ -37,4 +37,6 @@ Features
 </p>
 
 ### Credits:
-* [Adarsh Prakash](https://github.com/mikiadarsh25)
+<p align="left">
+<a href="https://github.com/mikiadarsh25"><img src="https://img.shields.io/badge/Credit-Adarsh%20Prakash-informational.svg?logo=arrow"></a>
+</p>
