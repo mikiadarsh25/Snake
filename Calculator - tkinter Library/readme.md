@@ -1,2 +1,2 @@
- <img src="image.png" width="50">
+ <img src="image.png">
 <img align="center" src="./assets/git.png?raw=true"/>
