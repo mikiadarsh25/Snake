@@ -1,6 +1,7 @@
 [![](image1.png)]()
 [![](image2.png)]()
 [![](image3.png)]()
+[![](image4.png)]()
 
 Password Manager is a GUI app which is use to save our credintials such as email/username and password also the site name.
 
