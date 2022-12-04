@@ -1,3 +1,4 @@
+import json
 from tkinter import *
 from tkinter import messagebox
 import random
@@ -33,6 +34,12 @@ def save():
     website_entry = website_box.get()
     email_entry = email_box.get()
     password_entry = password_box.get()
+    new_data = {
+        website_entry: {
+            "email": email_entry,
+            "Password": password_entry,
+        }
+    }
 
     if len(website_entry) == 0 or len(password_entry) == 0:
         messagebox.showinfo(title="Oops", message="Please make sure you haven't left any box empty")
@@ -42,10 +49,35 @@ def save():
                                                f" \nPassword: {password_entry} \n Is it ok to save")
 
         if is_ok:
-            with open("data.txt", "a") as data_file:
-                data_file.write(f"{website_entry} | {email_entry} | {password_entry}\n")
-            website_box.delete(0, END)
-            password_box.delete(0, END)
+            try:
+                with open("data.json", "r") as data_file:
+                    data = json.load(data_file)
+            except FileNotFoundError:
+                with open("data.json", "w") as data_file:
+                    json.dump(new_data, data_file, indent=4)
+
+            else:
+                data.update(new_data)
+                with open("data.json", "w") as data_file:
+                    json.dump(data, data_file, indent=4)
+            finally:
+                website_box.delete(0, END)
+                password_box.delete(0, END)
+# ---------------------------- FIND PASSWORD ------------------------------- #
+def find_password():
+    website_entry = website_box.get()
+    try:
+        with open("data.json") as data_file:
+            data = json.load(data_file)
+    except FileNotFoundError:
+        messagebox.showinfo(title="Error", message= "No Data file Found!")
+    else:
+        if website_entry in data:
+            email = data[website_entry]["email"]
+            password = data[website_entry]["Password"]
+            messagebox.showinfo(title=website_entry, message=f"Email:{email} \nPassword:{password}")
+        else:
+            messagebox.showinfo(title="Error", message= f"No details for {website_entry} exists. ")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -63,16 +95,19 @@ canvas.grid(row=0, column=1)
 website = Label(text="Website:")
 website.grid(row=1, column=0)
 
-website_box = Entry(width=35)
-website_box.grid(row=1, column=1, columnspan=2)
+website_box = Entry(width=17)
+website_box.grid(row=1, column=1)
 website_box.focus()
 
 email = Label(text="Email/Username:")
 email.grid(row=2, column=0)
 
 email_box = Entry(width=35)
-email_box.grid(row=2, column=1, columnspan=2)
+email_box.grid(row=2, column=1, columnspan=2 )
 email_box.insert(0, "@gmail.com")
+
+search = Button(text="Search", width=14, command=find_password)
+search.grid(row=1, column=2)
 
 password = Label(text="Password:")
 password.grid(row=3, column=0)
