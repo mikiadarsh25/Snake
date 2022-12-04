@@ -3,7 +3,7 @@
 [![](image3.png)]()
 [![](image4.png)]()
 
-Password Manager is a GUI app which is use to save our credintials such as email/username and password also the site name.
+Password Manager is a GUI app which is use to save our credintials such as email/username and password also the site name. It can also search the saved credintials
 
 Features
 --------
@@ -12,7 +12,7 @@ Features
 - Simple Python code
 - Easy to install
 - Designed for education
-- Depends only on the Python Standard Library such as tkinter, random , pyperclip, etc
+- Depends only on the Python Standard Library such as tkinter, random , pyperclip, json, etc
 - Used in hundreds of hours of classroom instruction
 - Fully Documented
 - 100% Test Coverage
