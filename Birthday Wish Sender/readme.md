@@ -1,7 +1,7 @@
 Birthday Wish Sender is a program use to send email automatically to some using smtp Library.
 
 
-##Features
+Features
 --------
 
 - Fun to play!
