@@ -1,5 +1,6 @@
 import smtplib
 from tkinter import *
+from tkinter import messagebox
 
 
 
@@ -16,6 +17,12 @@ def send():
         connection.sendmail(from_addr=my_email, to_addrs=sender,
                             msg=f"Subject:{subject}\n\n{message}"
                             )
+        messagebox.showinfo(title="Sent", message=f"Email Sent to {sender}")
+        to_box.delete(0, END)
+        subject_box.delete(0, END)
+        message_box.delete(0, END)
+        email_box.delete(0, END)
+        password_box.delete(0, END)
 
 
 window = Tk()
