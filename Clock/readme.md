@@ -1,4 +1,4 @@
-[![](Screenshot 2023-04-11 021659.jpg)]()
+
 
 Clock is a GUI app coded using tkinter and time library.
 Features
